@@ -14,12 +14,13 @@ on:
       - '**' # Build when there are changes in humble folder or related files
       - '!noetic/**' # Exclude noetic folder
 jobs:
-  # Ubuntu 22.04 (ROS2 Humble)
   dockerhub-humble:
-    uses: usdot-fhwa-stol/actions/.github/workflows/dockerhub.yml@main
+    uses: usdot-fhwa-stol/actions/.github/workflows/dockerhub.yml@fix/master_builds
     secrets:
       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+      DOCKERHUB_TOKEN:   ${{ secrets.DOCKERHUB_TOKEN }}
+      MY_DOCKER_ORG:     ${{ secrets.MY_DOCKER_ORG }}   # local org for dry-run
+      DRY_RUN:          ${{ secrets.DRY_RUN }}          # skip real pushes
     with:
       file: ./humble/Dockerfile
       tag_name_suffix: humble

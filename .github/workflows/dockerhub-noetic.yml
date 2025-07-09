@@ -14,12 +14,13 @@ on:
       - '**'  # Build when there are changes in noetic folder or related files
       - '!humble/**' # Exclude humble folder
 jobs:
-  # Ubuntu 20.04 (ROS1 Noetic)
   dockerhub-noetic:
-    uses: usdot-fhwa-stol/actions/.github/workflows/dockerhub.yml@main
+    uses: usdot-fhwa-stol/actions/.github/workflows/dockerhub.yml@fix/master_builds
     secrets:
       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+      DOCKERHUB_TOKEN:   ${{ secrets.DOCKERHUB_TOKEN }}
+      MY_DOCKER_ORG:     ${{ secrets.MY_DOCKER_ORG }}
+      DRY_RUN:          ${{ secrets.DRY_RUN }}
     with:
       file: ./noetic/Dockerfile
       tag_name_suffix: noetic
