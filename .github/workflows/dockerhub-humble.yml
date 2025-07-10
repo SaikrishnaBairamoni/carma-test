@@ -1,6 +1,9 @@
-# This workflow will build and push official docker images for ROS Humble when new push occurs
-# to develop, master, release branches but doesn't run any unit test or sonar scanner
+# This workflow will build and push official Docker images for ROS 2 Humble
+# when new pushes occur to develop, master, or release branches.
+# It includes logic to push alias tags like carma-master-humble.
+
 name: Docker Hub Humble build
+
 on:
   workflow_dispatch:
   push:
@@ -11,15 +14,17 @@ on:
     tags:
       - "carma-system-*"
     paths:
-      - '**' # Build when there are changes in humble folder or related files
-      - '!noetic/**' # Exclude noetic folder
+      - '**'
+      - '!noetic/**'
+
 jobs:
   dockerhub-humble:
     uses: usdot-fhwa-stol/actions/.github/workflows/dockerhub.yml@fix/master_builds
     secrets:
       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-      DOCKERHUB_TOKEN:   ${{ secrets.DOCKERHUB_TOKEN }}
+      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
     with:
       file: ./humble/Dockerfile
       tag_name_suffix: humble
       runner: ubuntu-latest
+      enable_dual_tag_push: true
