@@ -5,8 +5,8 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - develop
-      - master
+      - carma-develop
+      - carma-master
       - "release/*"
     tags:
       - "carma-system-*"
