@@ -27,4 +27,3 @@ jobs:
       file: ./humble/Dockerfile
       tag_name_suffix: humble
       runner: ubuntu-latest
-      enable_dual_tag_push: true
