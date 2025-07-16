@@ -1,5 +1,5 @@
 | Dockerhub Noetic Build - Develop | Dockerhub Noetic Build - Release | Dockerhub Humble Build - Develop | Dockerhub Humble Build - Release |
-|-------------------------------|------------------------------|------------------------------|------------------------------|
+|-------------------------------|------------------------------|------------------------------|------------------------------|.
 [![Noetic Build](https://github.com/usdot-fhwa-stol/carma-base/actions/workflows/dockerhub-noetic.yml/badge.svg?branch=develop)](https://github.com/usdot-fhwa-stol/carma-base/actions/workflows/dockerhub-noetic.yml) | [![Noetic Build](https://github.com/usdot-fhwa-stol/carma-base/actions/workflows/dockerhub-noetic.yml/badge.svg?tag=carma-system-*)](https://github.com/usdot-fhwa-stol/carma-base/actions/workflows/dockerhub-noetic.yml) | [![Humble Build](https://github.com/usdot-fhwa-stol/carma-base/actions/workflows/dockerhub-humble.yml/badge.svg?branch=develop)](https://github.com/usdot-fhwa-stol/carma-base/actions/workflows/dockerhub-humble.yml) | [![Humble Build](https://github.com/usdot-fhwa-stol/carma-base/actions/workflows/dockerhub-humble.yml/badge.svg?tag=carma-system-*)](https://github.com/usdot-fhwa-stol/carma-base/actions/workflows/dockerhub-humble.yml)
 
 # CARMABase test
