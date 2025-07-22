@@ -14,3 +14,4 @@ jobs:
     with:
       file: ./noetic/Dockerfile
       tag_name_suffix: noetic
+      runner: ubuntu-latest
