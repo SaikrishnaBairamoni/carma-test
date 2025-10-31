@@ -14,3 +14,4 @@ jobs:
     with:
       file: ./humble/Dockerfile
       tag_name_suffix: humble
+      runner: ubuntu-latest

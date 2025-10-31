@@ -143,7 +143,7 @@ LABEL org.label-schema.description="Base operating system install for the CARMA 
 LABEL org.label-schema.vendor="Leidos"
 LABEL org.label-schema.version=${VERSION}
 LABEL org.label-schema.url="https://highways.dot.gov/research/research-programs/operations/CARMA"
-LABEL org.label-schema.vcs-url="https://github.com/usdot-fhwa-stol/carma-base"
+LABEL org.label-schema.vcs-url="https://github.com/usdot-fhwa-stol/carma-test"
 LABEL org.label-schema.vcs-ref=${VCS_REF}
 LABEL org.label-schema.build-date=${BUILD_DATE}
 
